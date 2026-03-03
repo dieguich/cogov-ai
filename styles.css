@@ -177,3 +177,30 @@ li{ margin: 6px 0; }
   text-align: center;
 }
 .site-footer a{ color: inherit; }
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.site-logo {
+  max-width: 180px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.header-text {
+  flex: 1;
+}
+
+@media (max-width: 700px) {
+  .header-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .site-logo {
+    max-width: 160px;
+  }
+}
