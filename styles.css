@@ -184,12 +184,6 @@ li{ margin: 6px 0; }
   gap: 28px;
 }
 
-.site-logo {
-  max-width: 180px;
-  height: auto;
-  flex-shrink: 0;
-}
-
 .header-text {
   flex: 1;
 }
@@ -203,4 +197,20 @@ li{ margin: 6px 0; }
   .site-logo {
     max-width: 160px;
   }
+}
+
+/* --- NAV FIX: keep it visible, no blur --- */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9999;              /* higher than GoodIT headers */
+  background: #ffffff;        /* opaque background */
+  backdrop-filter: none;      /* remove blur */
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Optional: add a subtle shadow so it reads well on scroll */
+.site-nav {
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
 }
