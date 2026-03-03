@@ -4,8 +4,12 @@
   --muted: #4b5563;
   --card: #ffffff;
   --border: #e5e7eb;
-  --accent: #111827;
-  --accent2: #374151;
+
+  /* Brand colors */
+  --brand-blue: #2E8CB8;   /* azul del logo */
+  --brand-red: #D72638;    /* rojo del logo */
+  --brand-dark: #1f2937;
+
   --shadow: 0 10px 25px rgba(0,0,0,.06);
   --radius: 14px;
 }
@@ -86,14 +90,13 @@ h1{
   color: var(--accent);
 }
 
-.callout{
+.callout {
   display: inline-block;
   margin-top: 6px;
-  padding: 10px 12px;
+  padding: 10px 14px;
   border-radius: 12px;
-  border: 1px solid var(--border);
-  background: #fff;
-  box-shadow: var(--shadow);
+  border: 1px solid var(--brand-red);
+  background: rgba(215, 38, 56, 0.08);
   font-size: 14px;
 }
 
@@ -136,13 +139,17 @@ h1{
   margin: 18px 0;
 }
 
-h2{
+h2 {
   margin: 0 0 10px 0;
   font-size: 22px;
+  color: var(--brand-blue);
+  border-left: 4px solid var(--brand-blue);
+  padding-left: 10px;
 }
-h3{
+h3 {
   margin: 14px 0 8px;
   font-size: 16px;
+  color: var(--brand-dark);
 }
 
 p{ margin: 10px 0; color: var(--text); }
@@ -203,14 +210,29 @@ li{ margin: 6px 0; }
 .site-nav {
   position: sticky;
   top: 0;
-  z-index: 9999;              /* higher than GoodIT headers */
-  background: #ffffff;        /* opaque background */
-  backdrop-filter: none;      /* remove blur */
-  -webkit-backdrop-filter: none;
-  border-bottom: 1px solid var(--border);
+  z-index: 9999;
+  background: #ffffff;
+  border-bottom: 2px solid var(--brand-blue);
 }
 
 /* Optional: add a subtle shadow so it reads well on scroll */
 .site-nav {
   box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+
+.site-nav a {
+  color: var(--brand-dark);
+}
+
+.site-nav a:hover {
+  color: var(--brand-blue);
+  background: rgba(46, 140, 184, 0.08);
+}
+
+a {
+  color: var(--brand-blue);
+}
+
+a:hover {
+  text-decoration: underline;
 }
